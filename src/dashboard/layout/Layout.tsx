@@ -12,7 +12,7 @@ const Layout:React.FC = () => {
         setIsSidebarCollapsed((prev:any) => !prev);
       };
   return (
-     <div className="flex h-screen">
+     <div className="flex h-screen overflow-hidden ">
           {/* Sidebar hidden/collapsed toggle */}
           <div className={`${isSidebarCollapsed ? "w-0" : "w-auto"} transition-all duration-300 overflow-hidden`}>
             <Sidebar />

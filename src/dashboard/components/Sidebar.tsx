@@ -1,10 +1,11 @@
 
 import { Home, BarChart2, Settings, LogOut, Landmark, Bolt, BadgeDollarSign, HandCoins, ScanEye, ShieldHalf, Logs, History, ChartCandlestick} from "lucide-react";
 import '../Css/Sidebar.css'
+import { Link } from "react-router";
 
 const links = [
-  { name: "Dashboard", icon: <Home />, path: "#" },
-  { name: "Finance", icon: <Landmark />, path: "#" },
+  { name: "Dashboard", icon: <Home />, path: "/dashboard" },
+  { name: "Finance", icon: <Landmark />, path: "/dashboard/finance" },
   { name: "Controls", icon: <Bolt />, path: "#" },
   { name: "Sales", icon: <BadgeDollarSign />, path: "#" },
   { name: "Profits", icon: <HandCoins />, path: "#" },
@@ -33,6 +34,7 @@ export default function Sidebar() {
          {/* <h2 className="text-center text-sm">Muhammad Riyan</h2> */}
         <ul className="space-y-4 mt-3">
           {links.map((link) => (
+            <Link to = {link.path}>
             <li
               key={link.name}
               className="flex items-center gap-3 hover:text-black hover:bg-orange-500 p-2 hover:shadow rounded cursor-pointer"
@@ -40,6 +42,7 @@ export default function Sidebar() {
               {link.icon}
               {link.name}
             </li>
+            </Link>
           ))}
         </ul>
       </aside>

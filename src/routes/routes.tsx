@@ -1,5 +1,6 @@
 import Layout from "@/dashboard/layout/Layout"
 import Dashboard from "@/dashboard/pages/Dashboard"
+import Finance from "@/dashboard/pages/finance/Finance"
 import Home from "@/pages/Home"
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 
@@ -13,6 +14,9 @@ const router = createBrowserRouter([{
     children:[
       {
         path:"/dashboard",element:<Dashboard />
+      },
+      {
+        path:"/dashboard/finance",element:<Finance />
       },
   
     ]
